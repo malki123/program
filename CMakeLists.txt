@@ -5,3 +5,4 @@ set(CMAKE_C_STANDARD 11)
 
 add_executable(kalkulator
         kalkulator.c)
+target_link_libraries(kalkulator m)
