@@ -192,9 +192,59 @@ void wczytaj_parametry(int *c, int *a, int *b) {
 
 
 
-    return 0;
 
-}
+        double a,b,wynik;
+        char wybor;
+
+
+        printf("KALKULATOR.\n");
+        printf("wprowadz pierwsza liczbe:\n");
+        scanf("%lf",&a);
+        printf("wprowadz druga liczbe:\n");
+        scanf("%lf", &b);
+
+
+        printf("wybhierz dzialanie:\n+ Dodawanie\n- Odejmowanie\n* Mnozenie\n\ Dzielenie\n");
+        scanf("%s", &wybor);
+
+
+        switch(wybor)
+        {
+            case '+':
+                wynik = a+b;
+
+                printf("wynik dzialania to %lf\n", wynik);
+                break;
+            case '-':
+                wynik = a-b;
+
+                printf("wynik dzialania to %lf\n", wynik);
+                break;
+            case '*':
+                wynik = a*b;
+                {
+                    printf("wynik dzialania to %lf\n", wynik);
+                }
+
+                break;
+            case '/':
+                wynik = a/b;
+                if(b ==0){
+                    printf("Nie dziel przez 0");
+                }
+                if(b!=0) {
+                    printf("wynik dzialania to %lf\n", wynik);
+                }
+                break;
+
+
+        }
+
+
+        return 0;
+    }
+
+
 /*
 void wczytaj_wspolczynniki(double *a1, double *b1, double *c1, double *a2, double *b2, double *c2) {
     printf("Podaj a1: "); scanf("%lf", a1);
